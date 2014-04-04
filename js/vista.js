@@ -12,14 +12,14 @@ $(function(){
     $("#inicializar").on('click', controlador.init);
 
 
-    $('#section-main').tap(function(){ 
+    $('#div-img').tap(function(){ 
 
        vista.estadoBoton();
        controlador.cambiar();
 
    });
 
-    $('#section-main').swipe(controlador.init);
+    $('#div-img').swipe(controlador.init);
 
     
     $("#resetear").on('click', function(){ 
