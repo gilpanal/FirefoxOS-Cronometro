@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cronómetro</title>
+   <link rel="shortcut icon" href="img/icon128.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="zeptojs/zepto.min.js" > </script>
+  <script src="zeptojs/touch.js" > </script>
+</head>
+<body>
+
+
+  <section >
+    <header><h1>CRONÓMETRO</h1></header>
+    <article >  
+
+      <div class="caja1"> 
+        <h3><span id="crono"> 0.0 </span> segundos </h3>
+      </div>
+      
+      <button type="button" id="cambiar">start</button>
+      <button type="button" id="inicializar">init</button>
+      <button type="button" id="resetear">reset</button>
+
+      <div class="caja2"><div id="items"></div></div>
+      
+  </article>
+
+</section>
+
+<script src="js/modelo.js"></script>
+<script src="js/controlador.js"></script>
+<script src="js/vista.js"></script>
+
+</body>
+
+</html>

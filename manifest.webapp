@@ -1,0 +1,14 @@
+{
+  "name": "Cronómetro",
+  "description": "Cronómetro para Firefox OS",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/img/icon60.png",
+    "128": "/img/icon128.png"
+  },
+  "developer": {
+    "name": "gilpanal",
+    "url": "https://github.com/gilpanal/FirefoxOS-Cronometro"
+  },
+  "default_locale": "es"
+}

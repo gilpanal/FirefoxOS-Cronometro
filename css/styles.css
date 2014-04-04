@@ -1,0 +1,53 @@
+html, body {
+	margin: 0px;
+	padding: 0px;	
+	font-family:verdana;
+}
+
+article{
+
+	text-align:center;
+	width:300px; 
+	margin:0 auto;
+	
+}
+
+header{
+	width:300px; 
+	text-align:center;
+	margin:0 auto;
+	color:#333399;
+	
+
+}
+button {
+	padding: 0.4em;
+	font-size: 1.1em;
+	margin-left: 3px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#resetear{
+
+	color:red;
+}
+.caja1 {
+
+	height: 300px; 	
+	color:#FFF;
+	margin-left: 50px;
+	font-size:0.8em;	
+	background-image: url("../img/crono.png");
+	background-repeat:no-repeat;
+	background-size:200px;
+	padding-right:50px; 
+	line-height:250px;
+}
+
+.caja2 {	
+	
+	clear: both;	
+	bottom: 0px;
+	left: 0px;
+	
+}
