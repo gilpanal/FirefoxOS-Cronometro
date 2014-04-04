@@ -14,9 +14,13 @@ var controlador = {
 
     init:function(){
 
-        localStorage.c="0.0"; 
-        controlador.mostrar();
-        vista.borrarLista();
+        if(t === undefined){
+
+            localStorage.c="0.0"; 
+            controlador.mostrar();
+            vista.borrarLista();
+            
+        }      
 
     },
     incr: function ()     { 

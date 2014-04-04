@@ -2,31 +2,26 @@ var cl = $("#crono");
 
 $(function(){
 
-
     $("#cambiar").on('click', function(){
 
-       if(t === undefined){
-
-        $("#cambiar").text("stop ");
-        }
-        else{
-            $("#cambiar").text("start");
-        }
+        vista.estadoBoton();
         controlador.cambiar();
 
     });
 
-    $("#inicializar").on('click', function(){ 
-
-        if(t === undefined){
-
-            controlador.init();
-            
-        }
+    $("#inicializar").on('click', controlador.init);
 
 
-    });
+    $('#section-main').tap(function(){ 
 
+       vista.estadoBoton();
+       controlador.cambiar();
+
+   });
+
+    $('#section-main').swipe(controlador.init);
+
+    
     $("#resetear").on('click', function(){ 
 
         if(t === undefined){
@@ -37,7 +32,6 @@ $(function(){
 
 
     });
-
 });
 
 
@@ -45,6 +39,17 @@ $(function(){
 
 var vista = {
 
+    estadoBoton:function(){
+
+        if(t === undefined){
+
+            $("#cambiar").text("stop ");
+        }
+        else{
+            $("#cambiar").text("start");
+        }
+
+    },
     pintarElemLista: function(elem){
 
         $("#items").append('<br>'+elem+' segundos' );       
@@ -71,6 +76,4 @@ var vista = {
     }
 
 };
-
-
 
