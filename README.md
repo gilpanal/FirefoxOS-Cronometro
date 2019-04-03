@@ -1,6 +1,6 @@
 FirefoxOS-Cronometro
 ====================
 
-Simple Chronometer Firefox OS application.
+Simple Stopwatch Firefox OS application.
 
 

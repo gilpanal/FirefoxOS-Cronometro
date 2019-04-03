@@ -1,6 +1,6 @@
 {
-  "name": "Cronómetro",
-  "description": "Cronómetro para Firefox OS",
+  "name": "StopWatch",
+  "description": "StopWatch Firefox OS",
   "launch_path": "/index.html",
   "icons": {
     "60": "/img/icon60.png",
@@ -10,5 +10,5 @@
     "name": "gilpanal",
     "url": "https://github.com/gilpanal/FirefoxOS-Cronometro"
   },
-  "default_locale": "es"
+  "default_locale": "en"
 }

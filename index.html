@@ -2,38 +2,28 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Cronómetro</title>
-   <link rel="shortcut icon" href="img/icon128.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StopWatch</title>
+  <link rel="shortcut icon" href="img/icon128.png">
   <link rel="stylesheet" href="css/styles.css">
-   <script src="zeptojs/zepto.js" > </script>  
-  <script src="zeptojs/flickable.js" > </script> 
-
 </head>
 <body>
-
-
   <section id="section-main">
-    <header><h1>CRONÓMETRO</h1></header>
+    <header><h1>STOPWATCH</h1></header>
     <article >  
-
-      <div id="div-img" class="caja1"> 
-        <h3><span id="crono"> 0.0 </span> segundos </h3>
-      </div>
-      
-      <button type="button" id="cambiar">start</button>
-      <button type="button" id="inicializar">init</button>
-      <button type="button" id="resetear">reset</button>
-
-      <div class="caja2"><div id="items"></div></div>
-      
-  </article>
-
-</section>
-
-<script src="js/modelo.js"></script>
-<script src="js/controlador.js"></script>
-<script src="js/vista.js"></script>
-
+      <div id="div-img" class="box1"> 
+        <h3><span id="crono"> 0.0 </span> seconds </h3>
+      </div>      
+      <button type="button" id="start_button">start</button>
+      <button type="button" id="init_button">init</button>
+      <button type="button" id="reset_button">reset</button>
+      <div class="box2"><div id="items"></div></div>      
+    </article>
+  </section>
+  <script src="zeptojs/zepto.js" > </script>  
+  <script src="zeptojs/flickable.js" > </script> 
+  <script src="js/model.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/view.js"></script>
 </body>
-
 </html>

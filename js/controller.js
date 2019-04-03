@@ -4,21 +4,21 @@ $(function(){
 
     localStorage.c = (localStorage.c || "0.0");    
 
-    controlador.mostrar();
+    controller.counterDisplay();
 
-    vista.pintarListaEntera(modelo.devolverArray());
+    view.showList(model.retrieveArray());
 
 });
 
-var controlador = {  
+var controller = {  
 
     init:function(){
 
         if(t === undefined){
 
             localStorage.c="0.0"; 
-            controlador.mostrar();
-            vista.borrarLista();
+            controller.counterDisplay();
+            view.clearList();
             
         }      
 
@@ -28,36 +28,36 @@ var controlador = {
         localStorage.c = +localStorage.c + 0.1; 
     },
 
-    mostrar: function()  { 
+    counterDisplay: function()  { 
 
         cl.html((+localStorage.c).toFixed(1)); 
     },
 
-    arrancar: function() { 
+    start: function() { 
         t = setInterval(function(){
-         controlador.incr(); 
-         controlador.mostrar();
+         controller.incr(); 
+         controller.counterDisplay();
      }, 100);
 
     },
 
-    parar: function() { 
+    stop: function() { 
 
         clearInterval(t);         
 
-        vista.pintarElemLista((+localStorage.c).toFixed(1));
-        modelo.guardarEnArray((+localStorage.c).toFixed(1));
+        view.addListItem((+localStorage.c).toFixed(1));
+        model.storeInArray((+localStorage.c).toFixed(1));
 
         t = undefined; 
     },
 
-    cambiar: function() { 
+    startStop: function() { 
 
         if (!t) {
-            controlador.arrancar(); 
+            controller.start(); 
         }
         else {
-            controlador.parar(); 
+            controller.stop(); 
         }
     }
 

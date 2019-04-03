@@ -27,11 +27,11 @@ button {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-#resetear{
+#reset_button{
 
 	color:red;
 }
-.caja1 {
+.box1 {
 
 	height: 300px; 	
 	color:#FFF;
@@ -44,7 +44,7 @@ button {
 	line-height:250px;
 }
 
-.caja2 {	
+.box2 {	
 	
 	clear: both;	
 	bottom: 0px;

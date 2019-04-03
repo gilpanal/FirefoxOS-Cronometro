@@ -1,4 +1,3 @@
-/** Funciones para trabajar con arrays del localstorage **/
 Storage.prototype.setArray = function(key, obj) {
     return this.setItem(key, JSON.stringify(obj));
 };
@@ -10,9 +9,9 @@ Storage.prototype.deleteArray = function(key) {
 };
 
 
-var modelo = {
+var model = {
 
-    guardarEnArray: function(objTime) {        
+    storeInArray: function(objTime) {        
 
         
         if (!window.localStorage["cachedTimes"]) {   
@@ -47,13 +46,13 @@ var modelo = {
 
     },
     
-    vaciarArray: function() {
+    emptyArray: function() {
 
         window.localStorage.deleteArray("cachedTimes");
 
     },
 
-    devolverArray: function(){
+    retrieveArray: function(){
         var arrayAux = new Array(); 
 
         if (window.localStorage["cachedTimes"]) {             
