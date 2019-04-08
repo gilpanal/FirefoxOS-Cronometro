@@ -1,59 +1,35 @@
-var cl = $("#crono");
+var cl = document.getElementById('crono');
 
-$(function(){
+window.onload = function() {
 
-    $("#start_button").on('click', function(){
+    document.getElementById('start_button').addEventListener('click', controller.startButtonHandler); 
 
-        view.changeButtonText();
-        controller.startStop();
+    document.getElementById('init_button').addEventListener('click', controller.init);
 
-    });
-
-    $("#init_button").on('click', controller.init);
-
-
-    $('#div-img').tap(function(){ 
-
-       view.changeButtonText();
-       controller.startStop();
-
-   });
-
-    $('#div-img').swipe(controller.init);
-
-    
-    $("#reset_button").on('click', function(){ 
-
-        if(t === undefined){
-            controller.init();
-            model.emptyArray(); 
-            
-        }
-
-
-    });
-});
-
-
-
+    document.getElementById('reset_button').addEventListener('click', controller.resetButtonHandler);
+   
+    controller.onload();    
+};
 
 var view = {
 
     changeButtonText:function(){
 
         if(t === undefined){
-
-            $("#start_button").text("stop ");
+            document.getElementById('start_button').textContent = 'stop ';           
         }
         else{
-            $("#start_button").text("start");
+            document.getElementById('start_button').textContent = 'start';           
         }
 
     },
     addListItem: function(elem){
 
-        $("#items").append('<br>'+elem+' seconds' );       
-
+        var node = document.createElement('span');  
+        var textnode = document.createTextNode(elem +  ' seconds');  
+        node.appendChild(document.createElement('br'));       
+        node.appendChild(textnode);          
+        document.getElementById('items').appendChild(node);       
     },
 
     showList: function(arrayList){
@@ -66,13 +42,14 @@ var view = {
                 listItems += "<br>"+arrayList[i]+" seconds" ;
             }
         }
-
-        $("#items").html(listItems);
+        document.getElementById('items').innerHTML = listItems;
 
     },
 
     clearList: function(){
-        $("#items").empty();
+        
+        document.getElementById('items').innerHTML = '';
+        
     }
 
 };

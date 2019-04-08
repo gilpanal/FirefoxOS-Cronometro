@@ -1,27 +1,26 @@
 var t = undefined;
 
-$(function(){
-
-    localStorage.c = (localStorage.c || "0.0");    
-
-    controller.counterDisplay();
-
-    view.showList(model.retrieveArray());
-
-});
-
 var controller = {  
 
     init:function(){
 
         if(t === undefined){
 
-            localStorage.c="0.0"; 
+            localStorage.c='0.0'; 
             controller.counterDisplay();
             view.clearList();
             
         }      
 
+    },
+    onload : function() {
+
+        localStorage.c = (localStorage.c || '0.0');    
+    
+        controller.counterDisplay();
+    
+        view.showList(model.retrieveArray());
+    
     },
     incr: function ()     { 
 
@@ -30,7 +29,7 @@ var controller = {
 
     counterDisplay: function()  { 
 
-        cl.html((+localStorage.c).toFixed(1)); 
+        cl.innerHTML = (+localStorage.c).toFixed(1);
     },
 
     start: function() { 
@@ -59,7 +58,21 @@ var controller = {
         else {
             controller.stop(); 
         }
+    },
+    startButtonHandler: function(){
+
+        view.changeButtonText();
+        controller.startStop();
+
+    },
+    resetButtonHandler: function(){
+        if(t === undefined){
+            controller.init();
+            model.emptyArray(); 
+            
+        }
     }
+
 
 };
 

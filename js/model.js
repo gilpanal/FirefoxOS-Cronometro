@@ -12,19 +12,16 @@ Storage.prototype.deleteArray = function(key) {
 var model = {
 
     storeInArray: function(objTime) {        
-
         
         if (!window.localStorage["cachedTimes"]) {   
 
             var newArray = new Array(); 
             newArray[0] = objTime;
 
-            window.localStorage.setArray("cachedTimes", newArray);            
-            
+            window.localStorage.setArray("cachedTimes", newArray);                
         }   
         
         else {           
-
 
             var longLocalStorage = window.localStorage.getArray("cachedTimes").length;
             var array = new Array();            
@@ -39,9 +36,7 @@ var model = {
             
             window.localStorage.deleteArray("cachedTimes");
 
-            window.localStorage.setArray("cachedTimes",array);         
-
-
+            window.localStorage.setArray("cachedTimes",array);  
         }
 
     },
@@ -53,6 +48,7 @@ var model = {
     },
 
     retrieveArray: function(){
+        
         var arrayAux = new Array(); 
 
         if (window.localStorage["cachedTimes"]) {             
