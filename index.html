@@ -13,13 +13,19 @@
     <article >  
       <div id="div-img" class="box1"> 
         <h3><span id="crono"> 0.0 </span> seconds </h3>
-      </div>      
+      </div> 
+      <div class="button_container" data-commentid="1"></div>     
       <button type="button" id="start_button">start</button>
       <button type="button" id="init_button">init</button>
       <button type="button" id="reset_button">reset</button>
       <div class="box2"><div id="items"></div></div>      
     </article>
   </section>
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+   <!-- Load our React component. -->
+   <script src="js/components/Button.js"></script>
+
   <script src="js/model.js"></script>
   <script src="js/controller.js"></script>
   <script src="js/view.js"></script>
