@@ -18,6 +18,7 @@ class Button extends React.Component {
         text = 'start' ;
     }
     this.setState({ text: text })
+    this.props.onClickFunc();
   }
 
   render() {   
@@ -30,5 +31,3 @@ class Button extends React.Component {
   }
 }
 
-const domContainer = document.querySelector('.button_container');
-ReactDOM.render(e(Button), domContainer);

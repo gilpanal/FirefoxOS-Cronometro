@@ -61,7 +61,6 @@ var controller = {
     },
     startButtonHandler: function(){
 
-        view.changeButtonText();
         controller.startStop();
 
     },

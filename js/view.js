@@ -2,27 +2,18 @@ var cl = document.getElementById('crono');
 
 window.onload = function() {
 
-    document.getElementById('start_button').addEventListener('click', controller.startButtonHandler); 
-
     document.getElementById('init_button').addEventListener('click', controller.init);
 
     document.getElementById('reset_button').addEventListener('click', controller.resetButtonHandler);
    
     controller.onload();    
+ 
+    const domContainer = document.getElementById('start_button');
+    ReactDOM.render(e(Button, {onClickFunc: controller.startButtonHandler}), domContainer);
 };
 
 var view = {
 
-    changeButtonText:function(){
-
-        if(t === undefined){
-            document.getElementById('start_button').textContent = 'stop ';           
-        }
-        else{
-            document.getElementById('start_button').textContent = 'start';           
-        }
-
-    },
     addListItem: function(elem){
 
         var node = document.createElement('span');  
