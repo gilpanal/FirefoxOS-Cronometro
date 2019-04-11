@@ -1,15 +1,30 @@
 var cl = document.getElementById('crono');
 
 window.onload = function() {
-
-    document.getElementById('init_button').addEventListener('click', controller.init);
-
-    document.getElementById('reset_button').addEventListener('click', controller.resetButtonHandler);
-   
+ 
     controller.onload();    
  
-    const domContainer = document.getElementById('start_button');
-    ReactDOM.render(e(Button, {onClickFunc: controller.startButtonHandler}), domContainer);
+    const start_button = document.getElementById('start_button');
+    ReactDOM.render(e(Button, {
+        onClickFunc: controller.startButtonHandler, 
+        defaultText:'start', 
+        altText:'stop',
+        className:'button'
+    }), start_button);
+
+    const init_button = document.getElementById('init_button');
+    ReactDOM.render(e(Button, {
+        onClickFunc: controller.init, 
+        defaultText:'init',
+        className:'button buttonBlue'        
+    }), init_button);
+
+    const reset_button = document.getElementById('reset_button');
+    ReactDOM.render(e(Button, {
+        onClickFunc: controller.resetButtonHandler, 
+        defaultText:'reset',
+        className:'button buttonRed'
+    }), reset_button);
 };
 
 var view = {

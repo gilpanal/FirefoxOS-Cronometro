@@ -51,3 +51,25 @@ button {
 	left: 0px;
 	
 }
+
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+
+.buttonBlue {background-color: #008CBA;} /* Blue */
+.buttonRed {background-color: #f44336;} /* Red */ 
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 10px;
+  }

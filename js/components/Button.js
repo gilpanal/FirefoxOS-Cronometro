@@ -6,16 +6,16 @@ const e = React.createElement;
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { text: 'start' };
+    this.state = { text: this.props.defaultText };
   }
 
   onClickHandler(){
     let text = this.state.text;
-    if (this.state.text === 'start') {
-        text = 'stop ' ;
+    if (this.props.altText && this.state.text === this.props.defaultText) {
+        text = this.props.altText ;
     }
     else{
-        text = 'start' ;
+        text = this.props.defaultText ;
     }
     this.setState({ text: text })
     this.props.onClickFunc();
@@ -24,9 +24,8 @@ class Button extends React.Component {
   render() {   
 
     return e(
-      'button',
-      { onClick: () => this.onClickHandler() },
-      this.state.text
+      'button',  
+      { onClick: () => this.onClickHandler(), className: this.props.className }, this.state.text,
     );
   }
 }
